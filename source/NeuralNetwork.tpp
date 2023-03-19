@@ -2,8 +2,10 @@
 #include <fstream>
 #include <filesystem>
 
-template <typename type>
-NeuralNetwork<type>::NeuralNetwork() : layers(layers) {}
+template <typename type, size_t num_layers, std::array<Layer<type>, num_layers> layers>
+NeuralNetwork<type, num_layers, layers>::NeuralNetwork() {
+    
+}
 
 template <typename type>
 void NeuralNetwork<type>::feed_forward(std::vector<type> inputs) {

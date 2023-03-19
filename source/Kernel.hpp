@@ -5,10 +5,10 @@
 #include <array>
 #include <utility>
 
-template <typename type, std::pair<size_t, size_t> dimensions, acticvation_t activation>
+template <typename type, size_t width, size_t height, activation_t activation>
 class Kernel {
 public:
-    using matrix = std::array<std::array<type, dimensions.second>, dimensions.first>;
+    using matrix = std::array<std::array<type, width>, height>;
 
     matrix weights;
     type bias;
@@ -25,4 +25,6 @@ public:
 
     void calc_delta(double expected_output);
     void update_parameters(matrix inputs, double learning_rate);
-}
+};
+
+#include "Kernel.tpp"

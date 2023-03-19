@@ -5,7 +5,8 @@
 #include <fstream>
 
 std::default_random_engine generator;
-std::normal_distribution normal_distribution(0.0, 0.5);
+template <typename type>
+std::normal_distribution<type> normal_distribution(0.0, 0.5);
 
 template <typename type, size_t num_inputs, activation_t activation>
 Neuron<type, num_inputs, activation>::Neuron() {
@@ -24,7 +25,7 @@ Neuron<type, num_inputs, activation>::Neuron() {
         exit(1);
     }
     for (auto& weight : weights) {
-        weight = normal_distribution(generator);
+        weight = normal_distribution<type>(generator);
     }
     bias = 0;
 }

@@ -3,14 +3,14 @@
         {
             "type": "cppbuild",
             "label": "Build",
-            "command": "C:/msys64/mingw64/bin/g++.exe",
+            "command": "g++",
             "args": [
                 "-fdiagnostics-color=always",
-                "-std=c++23",
+                "-std=c++2a",
                 "-g",
                 "source/*.cpp",
                 "-o",
-                "${workspaceFolder}/NeuralNetwork.exe"
+                "${workspaceFolder}/NeuralNetwork"
             ],
             "options": {
                 "cwd": "${workspaceFolder}"
