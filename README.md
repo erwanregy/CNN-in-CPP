@@ -1,2 +1,3 @@
-# CNN-in-cpp
-Convolutional Neural Network (Lenet-5) in C++
+# [WIP] Convolutional Neural Network (CNN) built from scratch in C++
+
+CNN Architecture: Lenet-5
